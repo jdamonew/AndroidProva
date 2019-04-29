@@ -27,34 +27,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    //SEGUNDO
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    //TERCEIRO
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-    //QUARTO
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    //QUINTO
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    //SEXTO
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
+//    //SEGUNDO
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//    }
+//
+//    //TERCEIRO
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//    }
+//    //QUARTO
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//    }
+//
+//    //QUINTO
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//    }
+//
+//    //SEXTO
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//    }
 
 
 //     protected void onResult(){
