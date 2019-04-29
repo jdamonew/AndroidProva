@@ -43,10 +43,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-
-    //DEPOIS DO ONSTOP()
-    @Override
-    protected void onRestart() {
-        super.onRestart();
     }
-}
