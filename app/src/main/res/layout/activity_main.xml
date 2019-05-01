@@ -15,6 +15,7 @@
         android:layout_marginEnd="8dp"
         android:text="Login:"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/barrier2"
         app:layout_constraintEnd_toStartOf="@+id/txtEmail"
         app:layout_constraintHorizontal_bias="0.468"
@@ -27,11 +28,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:text="Senha:"
+        android:textAllCaps="false"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/txtPassword"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
@@ -60,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPassword"
@@ -69,32 +74,16 @@
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="monospace"
-        android:text="HELLO WORLD!"
-        android:textColor="#A50841"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/supTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:text="Seja bem-vindo ao meu primeiro aplicativo."
+        android:text="Bem Vindo ao seu catalogo do cinema"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/btnEntrar"
@@ -104,10 +93,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="84dp"
         android:text="Entrar"
-        android:textColor="#FFFFFF"
+        android:textColor="#4b0082"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:background="#A50841"
         android:elevation="20dp"
         android:radius="100dp"
         app:layout_constraintBottom_toTopOf="@+id/barrier2"
@@ -148,5 +136,31 @@
         android:layout_height="wrap_content"
         app:barrierDirection="top"
         tools:layout_editor_absoluteY="602dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="258dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_roxo" />
+
+    <ImageButton
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FFFFFF"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/barrier2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/share" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,22 +1,45 @@
 package com.android.first;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.first.adapter.RecycleViewAdapter;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
 
     //criamos uma variavel pra o botao
     private Button botao;
     EditText txtLogin;
     EditText txtPassword;
+    ImageButton warning;
+    Button teste;
+
+
+
 
     //chamada assim que a activity é iniciada
     @Override
@@ -28,36 +51,45 @@ public class MainActivity extends AppCompatActivity {
         botao = (Button) findViewById(R.id.btnEntrar);
         txtLogin = (EditText) findViewById(R.id.txtEmail);
         txtPassword=(EditText) findViewById(R.id.txtPassword);
+        warning = (ImageButton) findViewById(R.id.warning);
 
         //corpo que é chamado assim que o botao é apertado
         botao.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-                    if(txtLogin.getText().toString().equals("teste")&& txtPassword.getText().toString().equals("teste00")){
-                        startActivity(new Intent(MainActivity.this, SegundaActivity.class));
-                    }else{
-                        AlertDialog.Builder messageBox = new AlertDialog.Builder(MainActivity.this);
-                                messageBox.setTitle("Email/Senha Incorretos");
-                                messageBox.setMessage("\nPor favor digite Email e Senha correspondentes.");
-                                messageBox.setNeutralButton("OK",null);
-                                messageBox.show();
-                                //teste
-
-                    }
+            @Override
+            public void onClick(View v) {
+                if(txtLogin.getText().toString().equals("123")&& txtPassword.getText().toString().equals("123")){
+                    //intente explicita
+                    startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+                }else{
+                    AlertDialog.Builder messageBox = new AlertDialog.Builder(MainActivity.this);
+                    messageBox.setTitle("Email/Senha Incorretos");
+                    messageBox.setMessage("\nPor favor digite Email e Senha correspondentes.");
+                    messageBox.setNeutralButton("OK",null);
+                    messageBox.show();
+                    //teste
 
                 }
-            });
+
+            }
+        });
+
+        warning.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Estou compartinhando meu APP.");
+                sendIntent.setType("text/plain");
+                v.getContext().startActivity(sendIntent);
+            }
+        });
+
+
 
     }
 
-
-//    //SEGUNDO
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//    }
-//
     //quando a activity é iniciada ou retornada.
     @Override
     protected void onResume() {
@@ -70,7 +102,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Toast.makeText(getApplicationContext(), "Activity Minimizada.",Toast.LENGTH_LONG).show();
+    }
+
+    //    //SEGUNDO
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
 //    }
+//
+
 //
 //    //QUINTO
 //    @Override
@@ -91,5 +131,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
+
 }

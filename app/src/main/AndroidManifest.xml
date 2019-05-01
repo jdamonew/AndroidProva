@@ -5,6 +5,11 @@
 
     <dist:module dist:instant="true" />
 
+    <uses-permission android:name="android.permission-group.PHONE"/>
+    <uses-permission android:name="android.permission-group.CONTACTS"/>
+
+    <protected-broadcast android:name="com.motorola.motocare.INTENT_TRIGGER" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

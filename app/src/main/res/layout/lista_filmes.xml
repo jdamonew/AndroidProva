@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/lista_filmes">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageIcon"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+    android:id="@+id/titulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="11dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginTop="15dp"
+    android:layout_toEndOf="@+id/imageIcon"
+    android:layout_toRightOf="@+id/imageIcon"
+    android:text="Titulo"
+    android:textColor="#000000"
+    android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/genero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@+id/textView5"
+        android:text="genero"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/subAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/imageIcon"
+        android:text="Ano de Lançamento: "
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/ano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genero"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/subAno"
+        android:text="ano"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/original"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/textView6"
+        android:text="original"
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/original"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@+id/imageIcon"
+        android:text="Gênero: "
+        android:textSize="10sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/imageIcon"
+        android:text="Titulo Original:"
+        android:textSize="10sp"
+        android:textStyle="italic"/>
+
+</RelativeLayout>
