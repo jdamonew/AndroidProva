@@ -23,7 +23,7 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
                 finish();
             }
-            //o tempo em milisegundo para executar o run - 5000 = 5sec
-        }, 3000);
+            //o tempo em milisegundo para executar o run - 1000 = 1sec
+        }, 5000);
     }
 }
