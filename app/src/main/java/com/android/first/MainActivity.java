@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     EditText txtLogin;
     EditText txtPassword;
     ImageButton warning;
-    Button teste;
+    ImageButton drawMenu;
 
 
 
@@ -52,8 +53,9 @@ public class MainActivity extends AppCompatActivity {
         txtLogin = (EditText) findViewById(R.id.txtEmail);
         txtPassword=(EditText) findViewById(R.id.txtPassword);
         warning = (ImageButton) findViewById(R.id.warning);
+        drawMenu = (ImageButton) findViewById(R.id.menuIcon);
 
-        //corpo que é chamado assim que o botao é apertado
+        //corpo que é chamado assim que o botao ENTRAR NO LAYOUT MAINMENU é apertado
         botao.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -78,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "Estou compartinhando meu APP.");
-                sendIntent.setType("text/plain");
-                v.getContext().startActivity(sendIntent);
+                Intent implicita = new Intent();
+                implicita.setAction(Intent.ACTION_SEND);
+                implicita.putExtra(Intent.EXTRA_TEXT, "Estou compartinhando meu APP.");
+                implicita.setType("text/plain");
+                v.getContext().startActivity(implicita);
             }
         });
 

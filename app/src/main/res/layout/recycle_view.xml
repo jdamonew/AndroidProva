@@ -20,13 +20,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/menuIcon"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/drawmenu_icon"
+                android:background="@color/colorPrimary"/>
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center">-->
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:id="@+id/titleCentral"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:paddingLeft="-39dp"
                 android:src="@drawable/logo_branco" />
         </LinearLayout>
+
+
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -35,7 +55,8 @@
         android:id="@+id/tabMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarMain">
+        android:layout_below="@+id/toolbarMain"
+        >
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

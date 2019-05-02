@@ -53,10 +53,6 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-//        Glide.with(mContext)
-//                .asBitmap()
-//                .load(mImagens.get(position))
-//                .into(holder.imagem);
 
         holder.titulo.setText(mTitulos.get(position));
         holder.genero.setText(mGenero.get(position));
