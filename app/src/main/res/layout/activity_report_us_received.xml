@@ -45,7 +45,7 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:paddingRight="180dp"
+        android:paddingRight="150dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarMain"
         app:layout_constraintEnd_toEndOf="@+id/toolbarMain"
         app:layout_constraintStart_toStartOf="@+id/toolbarMain"
