@@ -43,7 +43,7 @@ public class ReportUs extends AppCompatActivity {
          Bundle params = intent.getExtras();
             if (params != null){
                 String msg = params.getString("msg");
-                Toast.makeText(this, "Tela 1", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Mensagem Enviada", Toast.LENGTH_LONG).show();
             }
 
     }

@@ -61,8 +61,9 @@ public class ReportUsReceived extends AppCompatActivity {
         Intent intent = new Intent();
         intent.putExtra("msg","Cancelou");
 
-        setResult(2, intent);
+        startActivity(new Intent(this, ReportUs.class));
         finish();
 
     }
+
 }
