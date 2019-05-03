@@ -84,23 +84,4 @@ public class SegundaActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-
-
-
-
-
-
-
-
-
-
-//    public List<Filme> getSetFilmeList(int qtd){
-//
-//        String[] nome = new String[]{"O Fabuloso Destino de Amelie Poulain","O Iluminado","Toy Story","Zodiaco"};
-//        String[] ano = new String[]{"2001","1980","1995","2007"};
-//        String[] genero = new String[]{"Fantasia","Horror","Animação","Suspense"};
-//        int[] photo = new int[]{R.drawable.amelie_loulain, R.drawable.iluminado, R.drawable.toy_story, R.drawable.zodiaco};
-//
-//        return null;
-//    }
 }
