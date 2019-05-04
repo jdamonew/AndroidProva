@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         //associamos a variavel ao componente na activity
         botao = (Button) findViewById(R.id.btnEntrar);
         txtLogin = (EditText) findViewById(R.id.txtEmail);
-        txtPassword=(EditText) findViewById(R.id.txtPassword);
+        txtPassword =(EditText) findViewById(R.id.txtPassword);
         share = (ImageButton) findViewById(R.id.share);
         drawMenu = (ImageButton) findViewById(R.id.menuIcon);
         reportUs = (ImageButton) findViewById(R.id.report);
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if(txtLogin.getText().toString().equals("123")&& txtPassword.getText().toString().equals("123")){
                     //intente explicita
                     startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+                    finish();
                 }else{
                     AlertDialog.Builder messageBox = new AlertDialog.Builder(MainActivity.this);
                     messageBox.setTitle("Email/Senha Incorretos");
@@ -71,37 +72,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         reportUs.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReportUs.class));
+                finish();
             }
         });
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "Iniciando a Activity. - OnStart",Toast.LENGTH_LONG).show();
+    }
 
-//    //SEGUNDO
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        Toast.makeText(getApplicationContext(), "Iniciando a Activity. - OnStart",Toast.LENGTH_LONG).show();
-//    }
-//
-//    //quando a activity é iniciada ou retornada.
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        Toast.makeText(getApplicationContext(), "Iniciando/Retornando a Activity. - OnResume",Toast.LENGTH_LONG).show();
-//    }
-//
-//    //activity é pausada - perde o foco quando minimiza a activity
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        Toast.makeText(getApplicationContext(), "Activity Minimizada.",Toast.LENGTH_LONG).show();
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(getApplicationContext(), "Retornando a Activity. - OnResume",Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(getApplicationContext(), "Activity Minimizada.",Toast.LENGTH_LONG).show();
+    }
 
 //    //QUINTO
 //    @Override
@@ -110,14 +109,11 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(getApplicationContext(), "Activity Parada - OnStop",Toast.LENGTH_LONG).show();
 //    }
 //
-//    //SEXTO
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        Toast.makeText(getApplicationContext(), "Activity Fechada - OnDestroy",Toast.LENGTH_LONG).show();
-//    }
-
-
-
+    //SEXTO
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Toast.makeText(getApplicationContext(), "Activity Fechada - OnDestroy",Toast.LENGTH_LONG).show();
+    }
 
 }

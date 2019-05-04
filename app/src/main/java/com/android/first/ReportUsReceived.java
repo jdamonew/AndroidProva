@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 public class ReportUsReceived extends AppCompatActivity {
@@ -22,9 +25,9 @@ public class ReportUsReceived extends AppCompatActivity {
             if(params != null){
 
                 Random random = new Random();
-                int ticket = random.nextInt(1000);
+                int ticket = random.nextInt(99999);
 
-                ticket = params.getInt("ticket");
+               // ticket = params.getInt("ticket");
                 String nome = params.getString("nome");
                 String messagem = params.getString("messagem");
                 String email = params.getString("email");
@@ -34,7 +37,7 @@ public class ReportUsReceived extends AppCompatActivity {
                 TextView vMenssagem = (TextView) findViewById(R.id.vMsg);
                 TextView vEmail = (TextView) findViewById(R.id.vEmail);
 
-                vTicket.setText("Ticket" + vTicket);
+                vTicket.setText(Integer.toString(ticket));
                 vNome.setText(nome);
                 vEmail.setText(email);
                 vMenssagem.setText(messagem);
@@ -48,8 +51,21 @@ public class ReportUsReceived extends AppCompatActivity {
 
     public void aceitou(View view){
 
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        Date date = new Date();
+        String dataEnvio = dateFormat.format(date);
+
         Intent intent = new Intent();
-        intent.putExtra("msg","Aceitou");
+        intent.putExtra("msg", dataEnvio);
+
+        setResult(1, intent);
+        finish();
+
+    }
+
+    public void voltarTela(View view){
+
+        Intent intent = new Intent();
 
         setResult(1, intent);
         finish();
@@ -59,7 +75,6 @@ public class ReportUsReceived extends AppCompatActivity {
     public void cancelou(View view){
 
         Intent intent = new Intent();
-        intent.putExtra("msg","Cancelou");
 
         startActivity(new Intent(this, ReportUs.class));
         finish();

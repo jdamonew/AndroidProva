@@ -14,7 +14,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
-        //getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         new Handler().postDelayed(new Runnable() {
@@ -24,6 +23,6 @@ public class SplashScreen extends AppCompatActivity {
                 finish();
             }
             //o tempo em milisegundo para executar o run - 1000 = 1sec
-        }, 5000);
+        }, 4000);
     }
 }
