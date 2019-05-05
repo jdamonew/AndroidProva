@@ -154,19 +154,19 @@
         android:id="@+id/report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="52dp"
         android:layout_marginBottom="12dp"
         android:background="#FFFFFF"
         android:tint="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/barrier2"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/warning" />
+        app:srcCompat="@drawable/warning"/>
 
     <ImageButton
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="12dp"
         android:background="#FFFFFF"
         android:tint="@color/colorAccent"
