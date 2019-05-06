@@ -13,8 +13,12 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import com.android.first.Fragment.MovieFragment;
+import com.android.first.Fragment.SerieFragment;
 import com.android.first.R;
+import com.google.android.material.tabs.TabLayout;
 
 import java.sql.Struct;
 import java.util.ArrayList;

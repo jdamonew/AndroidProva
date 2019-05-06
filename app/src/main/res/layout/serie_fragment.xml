@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp"
-    android:id="@+id/recycle"
+    android:id="@+id/serie_recycle"
     tools:context=".SegundaActivity">
 
 
@@ -21,27 +21,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/menuDraw"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/drawmenu_icon"
+                android:background="@color/colorPrimary" />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:id="@+id/titleCentral"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:paddingLeft="-39dp"
                 android:src="@drawable/logo_branco" />
         </LinearLayout>
 
-
-   </androidx.appcompat.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarMain">
+        android:layout_below="@+id/toolbarMain"
+        app:tabMode="fixed"
+        app:tabTextColor="#fff"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="#fff"
+        >
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
             android:text="Filmes" />
 
     </com.google.android.material.tabs.TabLayout>
@@ -49,7 +65,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_filmesRecycle"
+        android:id="@+id/lista_seriesRecycleTeste"
         android:layout_below="@+id/tabMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -57,5 +73,7 @@
         android:layout_marginBottom="-1dp">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+
 
 </RelativeLayout>

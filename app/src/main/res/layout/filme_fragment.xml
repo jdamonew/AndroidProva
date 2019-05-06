@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp"
-    android:id="@+id/recycle"
+    android:id="@+id/filme_recycle"
     tools:context=".SegundaActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -18,26 +18,26 @@
         android:theme="?attr/actionBarTheme">
 
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
-
-        <ImageButton
-            android:id="@+id/menuDraw"
-            android:layout_width="25dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/drawmenu_icon"
-            android:background="@color/colorPrimary" />
-
-        <ImageView
-            android:id="@+id/titleCentral"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_gravity="center"
-            android:paddingLeft="-39dp"
-            android:src="@drawable/logo_branco" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/menuDraw"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/drawmenu_icon"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/titleCentral"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:paddingLeft="-39dp"
+                android:src="@drawable/logo_branco" />
+        </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -64,7 +64,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_filmesRecycle"
+        android:id="@+id/lista_filmesRecycleTeste"
         android:layout_below="@+id/tabMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,7 +72,5 @@
         android:layout_marginBottom="-1dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-
 
 </RelativeLayout>

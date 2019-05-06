@@ -1,18 +1,34 @@
 package com.android.first;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
+import com.android.first.Fragment.MovieFragment;
+import com.android.first.Fragment.SerieFragment;
 import com.android.first.adapter.RecycleViewAdapter;
+import com.android.first.adapter.ViewPageAdapter;
 import com.android.first.model.Filme;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
 
+import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +47,23 @@ public class SegundaActivity extends AppCompatActivity {
         setContentView(R.layout.recycle_view);
         initImageBitmaps();
 
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabMenuTeste);
+//        ViewPager viewPager = (ViewPager) findViewById(R.id.vp_viewpager);
+//        ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
+//        adapter.AddFragment( new MovieFragment(),"Filmes");
+//        adapter.AddFragment(new SerieFragment(), "Series");
+//
+//        viewPager.setAdapter(adapter);
+//        tabLayout.setupWithViewPager(viewPager);
+
+
+
     }
+
+
 
     public void initImageBitmaps(){
 
-        final int position;
 
         fNome.add("O Fabuloso Destino de Amelie");
         fOriginal.add("Le fabuleux destin d'Amélie Poulain");

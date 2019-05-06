@@ -43,35 +43,24 @@
 
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabMenu"
+        android:id="@+id/tabMenuTeste"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbarMain"
         app:tabMode="fixed"
         app:tabTextColor="#fff"
         android:background="@color/colorPrimary"
-        app:tabIndicatorColor="#fff"
-        >
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal"
-            android:text="Filmes" />
+        app:tabIndicatorColor="#fff">
 
     </com.google.android.material.tabs.TabLayout>
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_filmesRecycle"
-        android:layout_below="@+id/tabMenu"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-1dp">
+        android:layout_height="match_parent">
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </androidx.viewpager.widget.ViewPager>
+
 
 
 
