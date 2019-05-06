@@ -1,9 +1,16 @@
 package com.android.first;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -96,24 +103,36 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Retornando a Activity. - OnResume",Toast.LENGTH_LONG).show();
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(getApplicationContext(), "Activity Minimizada.",Toast.LENGTH_LONG).show();
+        notificacaoPause();
+
     }
 
-//    //QUINTO
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        Toast.makeText(getApplicationContext(), "Activity Parada - OnStop",Toast.LENGTH_LONG).show();
-//    }
-//
-    //SEXTO
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(getApplicationContext(), "Activity Fechada - OnDestroy",Toast.LENGTH_LONG).show();
     }
 
+    //geração de notificação
+    public void notificacaoPause(){
+        NotificationManager notificacao = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        PendingIntent p = PendingIntent.getActivity(this,0,new Intent(this, SplashScreen.class), 0);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setTicker("Aplicativo Minimizado");
+        builder.setContentTitle("JobFlix");
+        builder.setContentText("Aplicativo foi minimizado.");
+        builder.setSmallIcon(R.drawable.jf);
+        builder.setContentIntent(p);
+
+        Notification n = builder.build();
+        n.vibrate = new long[]{150, 300, 150, 600};
+        n.flags = Notification.FLAG_AUTO_CANCEL;
+        notificacao.notify(R.drawable.jf,n);
+
+    }
 }
