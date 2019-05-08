@@ -7,7 +7,12 @@
 
     <uses-permission android:name="android.permission-group.PHONE" />
     <uses-permission android:name="android.permission-group.CONTACTS" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.CALL_PHONE" />
+=======
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+>>>>>>> b91e8ec352fc7939a8f2a3cf76281fc42470aa13
 
     <protected-broadcast android:name="com.motorola.motocare.INTENT_TRIGGER" />
 
