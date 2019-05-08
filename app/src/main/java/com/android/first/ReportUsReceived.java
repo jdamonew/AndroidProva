@@ -56,7 +56,7 @@ public class ReportUsReceived extends AppCompatActivity {
         String dataEnvio = dateFormat.format(date);
 
         Intent intent = new Intent();
-        intent.putExtra("msg", dataEnvio);
+        intent.putExtra("msg", "Enviada - " + dataEnvio);
 
         setResult(1, intent);
         finish();
@@ -75,8 +75,9 @@ public class ReportUsReceived extends AppCompatActivity {
     public void cancelou(View view){
 
         Intent intent = new Intent();
+        intent.putExtra("msg", "Cancelada");
 
-        startActivity(new Intent(this, ReportUs.class));
+        setResult(2,intent);
         finish();
 
     }

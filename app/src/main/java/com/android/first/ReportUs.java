@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class ReportUs extends AppCompatActivity {
 
     public static final int RESULT_REPORT_US_RECEIVED = 1;
+    public static final int RESULT_REPORT_US_RECEIVED_CANCEL = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,12 @@ public class ReportUs extends AppCompatActivity {
         params.putString("email", email.getText().toString());
 
 
-        if  (nome.getText().toString().isEmpty()){
-             Toast.makeText(getApplicationContext(), "Nome Invalido", Toast.LENGTH_LONG).show();
-        }else if(messagem.getText().toString().isEmpty()){
-            Toast.makeText(getApplicationContext(), "Menssagem Invalida", Toast.LENGTH_LONG).show();
+        if  (nome.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Nome Inválido", Toast.LENGTH_LONG).show();
         }else if(email.getText().toString().isEmpty()){
-            Toast.makeText(getApplicationContext(), "Email Invalio", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Email Inválido", Toast.LENGTH_LONG).show();
+        }else if(messagem.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(), "Mensagem Inválida", Toast.LENGTH_LONG).show();
         }else{
             Intent intent = new Intent(this, ReportUsReceived.class);
             intent.putExtras(params);
@@ -64,8 +65,14 @@ public class ReportUs extends AppCompatActivity {
             Bundle params = intent.getExtras();
             if (params != null) {
                 String msg = params.getString("msg");
-                Toast.makeText(this, "Mensagem Enviada - " + msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Mensagem " + msg, Toast.LENGTH_LONG).show();
             }
+        }else if(codigo == 2){
+            Bundle params = intent.getExtras();
+            if (params != null) {
+                String msg = params.getString("msg");
+                Toast.makeText(this, "//Mensagem " + msg, Toast.LENGTH_LONG).show();
+             }
         }
 
     }
